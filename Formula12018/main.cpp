@@ -4,6 +4,7 @@
 #include <cstring>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <mysql/jdbc.h>
 using namespace std;
 
 #define PORT 18027
@@ -41,6 +42,7 @@ int main()
 		perror("bind failed");
 		return 2;
 	}
+
 
 	/* now loop, receiving data and printing what we received */
 	for (;;) {
